@@ -1,24 +1,32 @@
 {
   "name": "beerfactoriesapi",
-  "version": "1.0.0",
-  "description": "Beer Factories Api",
-  "main": "index.js",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./server",
+    "dev": "nodemon ./server",
+    "dev:debug": "DEBUG=beerfactoriesapi* npm run dev",
+    "lint": "eslint ."
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/TemidoRocha/beerFactoriesApi.git"
-  },
-  "author": "Manuel e Ricardo",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/TemidoRocha/beerFactoriesApi/issues"
-  },
-  "homepage": "https://github.com/TemidoRocha/beerFactoriesApi#readme",
   "dependencies": {
-    "dotenv": "^8.2.0",
+    "debug": "^4.1.1",
+    "dotenv": "^8.1.0",
     "express": "^4.17.1",
-    "googleapis": "^39.2.0"
+    "googleapis": "^39.2.0",
+    "http-errors": "^1.7.3",
+    "morgan": "^1.9.1",
+    "serve-favicon": "^2.5.0"
+  },
+  "devDependencies": {
+    "mocha": "^7.0.1",
+    "nodemon": "^2.0.2",
+    "eslint": "^6.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "prettier": "^1.18.2",
+    "@ironh/eslint-config": "^0.0.2"
   }
 }
