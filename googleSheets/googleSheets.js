@@ -2,7 +2,6 @@ const fs = require('fs');
 const readline = require('readline');
 const { google } = require('googleapis');
 
-
 // If modifying these scopes, delete token.json.
 const SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
 // The file token.json stores the user's access and refresh tokens, and is
@@ -66,17 +65,11 @@ function getNewToken(oAuth2Client, callback) {
   });
 }
 
-/**
- *
- * @see https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
- * @param {google.auth.OAuth2} auth The authenticated Google OAuth client.
- */
-let jason = [];
+const jason = [];
 
-let sheetName = 'PRT'
-let firstCollumn = 'A'
-let lastCollumn = 'C'
-
+const sheetName = 'PRT';
+const firstCollumn = 'A';
+const lastCollumn = 'C';
 
 function listFactories(auth) {
   const sheets = google.sheets({ version: 'v4', auth });
@@ -107,5 +100,3 @@ function listFactories(auth) {
     }
   );
 }
-
-
