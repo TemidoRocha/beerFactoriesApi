@@ -6,6 +6,7 @@ const createError = require('http-errors');
 const logger = require('morgan');
 const serveFavicon = require('serve-favicon');
 const indexRouter = require('./routes/index');
+const prt = require('./routes/prt');
 
 const app = express();
 
@@ -14,6 +15,7 @@ app.use(logger('dev'));
 app.use(express.json());
 
 app.use('/', indexRouter);
+app.use('/prt', prt);
 
 // Catch missing routes and forward to error handler
 app.use((req, res, next) => {
