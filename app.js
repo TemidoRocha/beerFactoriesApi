@@ -5,7 +5,7 @@ const express = require('express');
 const createError = require('http-errors');
 const logger = require('morgan');
 const serveFavicon = require('serve-favicon');
-const indexRouter = require('./beerfactoriesapi/routes/index');
+const indexRouter = require('./routes/index');
 
 const app = express();
 
